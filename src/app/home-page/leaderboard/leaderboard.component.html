@@ -1,0 +1,36 @@
+<div class="grid-container">
+    <app-navbar class="navbar"></app-navbar>
+
+
+
+    <div class="content">
+        <div class="teams">
+            <!-- <h4 class="flex-center" style="padding-top: 0.2rem;">Leaderboard</h4> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let leader of leaders; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{leader.username}}</td>
+                        <td>{{leader.score}}</td>
+                        <td *ngIf="leader.status==true">🟢</td>
+                        <td *ngIf="leader.status==false">🔴</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+    <app-footer class="footer flex-center"></app-footer>
+</div>

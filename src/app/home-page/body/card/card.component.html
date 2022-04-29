@@ -1,0 +1,15 @@
+<div class="card-img flex-center">
+    <img src="/assets/images/pokemon-images/{{ element.id }}.gif" alt="">
+</div>
+<div class="card-id">
+    <div>#{{ element.id }}</div>
+    <div>xP : {{ element.base_experience }}</div>
+</div>
+<div class="card-name flex-center">
+    <p>{{ element.name.charAt(0).toUpperCase() + element.name.slice(1) }}</p>
+</div>
+<div class="card-button flex-center">
+    <button class="card-button-inside" (click)="onAddButtonClick(element.id,element.base_experience)"
+        [disabled]="isInTeam(element.id)" [ngClass]="{grey : isInTeam(element.id)}">Add
+        to team +</button>
+</div>

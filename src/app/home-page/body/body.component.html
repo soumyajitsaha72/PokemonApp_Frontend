@@ -1,0 +1,41 @@
+<!-- Card Component -->
+<app-card class="card" *ngFor="let item of items | filter:searchPokemon" [element]="item"
+    (click)="onCardClicked(item);scroll()">
+</app-card>
+
+<!-- This will only appear when clicked -->
+<div id="target" class="card-clicked" *ngIf="isShow">
+    <div class="card-clicked-top">
+        <div class="card-clicked-top-id">
+            <p>#{{ poke.id }}</p>
+        </div>
+        <div class="card-clicked-top-name">
+            <p>{{ poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}}</p>
+        </div>
+        <div class="card-clicked-top-xp">
+            <p>xP : {{ poke.xp }}</p>
+        </div>
+        <div class="card-clicked-top-close-button">
+            <button (click)="onCloseButtonClicked()" class="close-button">X</button>
+        </div>
+    </div>
+    <div class="card-clicked-img flex-center">
+        <img [src]="poke.sprites.other.dream_world.front_default" alt="card-clicked-img">
+    </div>
+    <div class="card-clicked-desc">
+        <div class="flex-left">{{ poke.desc }}</div>
+        <div class="flex-left">Height : {{ poke.height/10 }} meter</div>
+        <div class="flex-left">Weight : {{ poke.weight/10 }} kg</div>
+        <div class="flex-left wrap">Abilities : <span class="poke-type" *ngFor="let a of poke.abilities">{{
+                a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
+                }}</span>
+        </div>
+        <div class="flex-left wrap">Type : <span class="poke-type" *ngFor="let t of poke.types"
+                [ngStyle]="{backgroundColor: colors[t.type.name]}">{{ t.type.name }}</span>
+        </div>
+        <div class="flex-left wrap">Weaknesses : <span class="poke-type" *ngFor="let weakness of poke.weaknesses"
+                [ngStyle]="{backgroundColor: colors[weakness]}">{{ weakness.charAt(0).toUpperCase() +
+                weakness.slice(1)
+                }}</span></div>
+    </div>
+</div>

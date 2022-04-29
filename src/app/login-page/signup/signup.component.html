@@ -1,0 +1,21 @@
+<div class="login-template">
+    <div class="login-template-top">
+        <h2>Sign Up</h2>
+    </div>
+    <div class="login-template-middle flex-center">
+        <form (ngSubmit)="onSignUp()">
+            <input [(ngModel)]="creds.username" type="text" name="username" id="username" placeholder="Username"
+                required>
+            <input [(ngModel)]="creds.email" type="email" name="email" id="email" placeholder="Email" required>
+            <input [(ngModel)]="creds.password" type="password" name="password" id="password" placeholder="Password"
+                required>
+            <button type="submit" class="login-button">Signup</button>
+            <p>{{message}}</p>
+        </form>
+
+    </div>
+    <div class="login-template-bottom flex-center">
+        <p>or</p>
+        <button class="signup-button" (click)="onClick()">Login</button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+#logout {
+    text-decoration: none;
+    padding-top: 4px;
+    text-align: center;
+    height: 25px;
+    width: 5rem;
+    border-radius: 2em;
+    outline: none;
+    border: 2px solid #0075BE;
+    font-family: myfont;
+    color: #0A285F;
+    background-color: #FFCC00;
+    font-size: 14px;
+}
+
+
+#logout:hover {
+    border: 2px solid #0A285F;
+    color: #D5A100;
+    background-color: #0A285F;
+
+}

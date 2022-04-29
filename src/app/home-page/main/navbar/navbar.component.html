@@ -1,0 +1,26 @@
+<div class="logo flex-center">
+    <img src="/assets/images/pokedexLogo.png" (click)="navigateToHome()" alt="home-img">
+</div>
+<div class="search flex-center">
+    <!-- <form action="#"> -->
+    <input type="text" name="search" placeholder="Search..." [(ngModel)]="searchField" (input)="onInput()">
+    <!-- </form> -->
+</div>
+
+<div class="points flex-center">
+    <p>Hi! {{ users.username }}</p>
+</div>
+
+<div class="points flex-center">
+    <p>xP : {{ xp }}</p>
+    <!-- TO BE CHECKED LATER -->
+</div>
+<div class="profile flex-center">
+    <button class="profile-button" (click)="navigateToTeams()">Teams</button>
+</div>
+<div class="profile flex-center">
+    <button class="profile-button" (click)="navigateToLeaderboard()">Leaderboard</button>
+</div>
+<div class="profile flex-center">
+    <a routerLink="/login-signup" button id="logout" (click)="onLogout()">Logout</a>
+</div>

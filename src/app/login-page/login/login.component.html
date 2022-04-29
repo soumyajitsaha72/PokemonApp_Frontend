@@ -1,0 +1,18 @@
+<div class="login-template">
+    <div class="login-template-top">
+        <h2>Login</h2>
+    </div>
+    <div class="login-template-middle flex-center">
+        <form (ngSubmit)="onSubmit()">
+            <input [(ngModel)]="credentials.email" required type="email" name="email" placeholder="Email" required>
+            <input [(ngModel)]="credentials.password" required type="password" name="password" placeholder="Password"
+                required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+
+    </div>
+    <div class="login-template-bottom flex-center">
+        <p>or</p>
+        <button class="signup-button" (click)="onClick()">Signup</button>
+    </div>
+</div>

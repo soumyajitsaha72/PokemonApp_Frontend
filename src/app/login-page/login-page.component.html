@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <div class="login-body">
+        <div class="login-body-left flex-center">
+            <div class="login-body-left-top flex-center">
+                <h1>Welcome!</h1>
+                <p *ngIf="!isSignup">If you have not registered... Signup!</p>
+                <p *ngIf="isSignup">If you have already registered... Login!</p>
+            </div>
+            <div class="login-body-left-bottom flex-center">
+                <img src="/assets/images/{{ isSignup ?  'signupBodyLeft' : 'loginBodyLeft' }}.png" alt="login-left-img">
+            </div>
+        </div>
+
+        <!-- Make different Component -->
+        <div class="login-body-right">
+            <!-- To Toggle between login and signup, we have used event binding -->
+            <app-login *ngIf="!isSignup" (toggle)="this.isSignup=$event"></app-login>
+            <app-signup *ngIf="isSignup" (toggle)="this.isSignup=$event"></app-signup>
+        </div>
+    </div>
+</div>

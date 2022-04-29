@@ -1,0 +1,24 @@
+.background {
+    background: url("/assets/images/back3.gif");
+}
+
+.extra {
+    margin-top: 0.2rem;
+    border-top: 1px solid black;
+}
+
+.clicked{
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
+
+.displayNone{
+    display:none;
+}
+
+.grey{
+    background-color: gray;
+    color: lightgray;
+    border: none;
+}

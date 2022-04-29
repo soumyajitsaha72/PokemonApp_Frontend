@@ -1,0 +1,105 @@
+.login-template{
+    height: 100%;
+    width: 100%;
+    background-color: #D5A100;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 45% 30%;
+    grid-template-areas: "top" "middle" "bottom";
+}
+
+.login-template-top{
+    grid-area: top;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.login-template-top h2{ 
+    letter-spacing: 0.1rem;
+}
+
+
+
+.login-template-middle{
+    grid-area: middle;
+}
+.login-template-middle form{   
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.login-template-middle input{
+    height: 2rem;
+    border-radius: 2em;
+    outline: none;
+    border: 2px solid lightgrey;
+    padding-left: 1em;
+    font-family: myfont;
+}
+.login-template-middle input:hover{
+     border: 2px solid #0075BE;
+}
+.login-template-middle input:focus{
+    border: 2px solid #0075BE;
+}
+.login-button{
+    height: 2rem;
+    width: 50%;
+    border-radius: 2em;
+    outline: none;
+    font-family: myfont;
+    font-size: 12px;
+
+    align-self: center;
+
+    border: 2px solid #0A285F;
+    color: #0A285F;
+    background-color: #D5A100;
+
+}
+.login-button:hover{
+    border: 2px solid #0075BE;
+    color: #FFCC00;
+    background-color: #0A285F;
+}
+
+
+
+
+.login-template-bottom{
+    grid-area: bottom;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.signup-button{
+    height: 2rem;
+    width: 30%;
+    border-radius: 2em;
+    outline: none;
+    border: 2px solid #0075BE;
+    font-family: myfont;
+    color: green;
+    background-color: #74cc0e;
+    font-size: 12px;
+
+    align-self: center;
+}
+.signup-button:hover{
+    border: 2px solid #0A285F;
+    color: #74cc0e;
+    background-color: green;
+
+}
+
+
+
+
+
+
+
+
+
+
+
