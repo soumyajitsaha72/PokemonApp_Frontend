@@ -7,13 +7,9 @@
 
         <div class="teams">
             <!-- <h4 class="flex-center" style="padding-top: 0.2rem;">Teams Score = 10</h4> -->
-            <h4 class="flex-center" style="padding-top: 0.2rem;">Score = {{ score }}</h4>
+            <h4 class="flex-center" style="padding-top: 0.2rem;">Score = {{ score }} <button style="margin-left: 2rem;"
+                    class="profile-button" (click)="onDone()">Done ✔</button></h4>
             <p *ngIf="teamsArr.length == 0"> Please add pokemons to teams</p>
-
-            <div class="profile flex-center">
-                <button class="profile-button" (click)="onDone()">Done</button>
-            </div>
-
 
             <div class="poke-teams" *ngFor="let id of teamsArr">
                 <div class="poke-teams-id">#{{id}}</div>
