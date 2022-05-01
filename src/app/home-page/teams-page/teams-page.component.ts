@@ -27,15 +27,15 @@ export class TeamsPageComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.teamServ.pokeArray);
-    console.log(this.teamServ.getTeam());
+    // console.log(this.teamServ.pokeArray);
+    // console.log(this.teamServ.getTeam());
   }
 
   result: string;
   email = this.global.receivedEmail;
   onDone() {
 
-    console.log(this.email, this.score);
+    // console.log(this.email, this.score);
     this.update.updateScore(this.email, this.score).subscribe(
       (response: any) => {
         this.result = response;
